@@ -1,6 +1,6 @@
 :root {
   --Header-backg: #7fffd3;
-  --List-flag: #d2691e;
+  --backlog-flag: #d2691e;
 }
 
 body {
@@ -40,8 +40,19 @@ hr {
 
 .flag {
   color: white;
-  background-color: var(--List-flag);
   font-weight: bold;
   padding: 5px 10px;
   font-size: 0.8em;
+}
+
+.backlog-flag {
+  background-color: var(--backlog-flag);
+}
+
+.inProgress-flag {
+  background-color: rgb(155, 19, 19);
+}
+
+.completed-flag {
+  background-color: rgb(20, 216, 20);
 }

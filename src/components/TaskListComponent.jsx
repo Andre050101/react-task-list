@@ -7,12 +7,12 @@ const TaskListComponent = () => {
 
     const backlogOrProgressList = backlogOrProgress.map(task => (
         <li key={task.id}>
-            <strong>{task.title}</strong> <span className="flag">{task.state}</span> <br></br> Priority: {task.priority} <br></br> Estimated Time: {task.estimatedTime}
+            <strong>{task.title}</strong> <span className={`flag ${task.state === "backlog" ? "backlog-flag" : "inProgress-flag"}`}>{task.state}</span>  <br></br> Priority: {task.priority} <br></br> Estimated Time: {task.estimatedTime}
         </li>
     ));
     const completedList = completed.map(task => (
         <li key={task.id}>
-            <strong>{task.title}</strong> <span className="flag">{task.state}</span> <br></br> Priority: {task.priority}  <br></br> Estimated Time: {task.estimatedTime}
+            <strong>{task.title}</strong> <span className="flag completed-flag">{task.state}</span> <br></br> Priority: {task.priority}  <br></br> Estimated Time: {task.estimatedTime}
         </li>
     ));
 
