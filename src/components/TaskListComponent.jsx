@@ -1,5 +1,5 @@
 import React from "react";
-import { tasks } from "../data/tasks";
+import tasks from "../data/tasks";
 
 const TaskListComponent = () => {
     const backlogOrProgress = tasks.filter(task => task.state === "backlog" || task.state === "in_progress");
@@ -26,7 +26,7 @@ const TaskListComponent = () => {
                 </ul>
             </div>
             <div>
-                <h2>Cuompleted Tasks ({completed.length})</h2>
+                <h2>Completed Tasks ({completed.length})</h2>
                 <ul>
                     {completedList}
                 </ul>
